@@ -1,0 +1,19 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheapest Compute Engine VM Instances</title>
+</head>
+<body>
+<h1>Cheapest Compute Engine VM Instances</h1>
+<ul>
+{% for region, instance in cheapest_instances.items() %}
+<li>{{ region }}: {{ instance.instance_type }} (${{ instance.price }}/hr)</li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
